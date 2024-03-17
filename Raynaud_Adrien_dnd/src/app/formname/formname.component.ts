@@ -30,6 +30,8 @@ export class FormnameComponent {
       SharedDataService.Username = this.formulaire.value.Username;
       SharedDataService.PersoName = this.formulaire.value.PersoName;
       this.router.navigate(['/step2']);
+    }else{
+      alert('Formulaire invalide');
     }
   }
 }
