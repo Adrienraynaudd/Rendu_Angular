@@ -1,0 +1,11 @@
+<select formControlName="alignment" class="custom-select" (change)="onAlignementSelect($event)">
+    @for (alignment of alignments; track alignment.label) {
+        <option [value]="alignment.label">{{ alignment.label }}</option>
+    }
+</select>
+
+<p *ngIf="selectedAlignement" class="description">{{ getDescription() }}</p>
+
+<button (click)="onNext()" class="btn-next">Suivant</button>
+
+  <router-outlet></router-outlet>

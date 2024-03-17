@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Informations sur le personnage</h5>
+            <p class="card-text">Nom du joueur : {{ username }}</p>
+            <p class="card-text">Nom du personnage : {{ persoName }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Détails de la race et de la classe</h5>
+            <p class="card-text">Race : {{ race }}</p>
+            <p class="card-text">Classe : {{ classe }}</p>
+            <p class="card-text">Archétype : {{ archetype }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Autres détails</h5>
+            <p class="card-text">Alignement : {{ alignment }}</p>
+            <p class="card-text">Background : {{ background }}</p>
+            <h5 class="card-title">Caractéristiques</h5>
+            <ul class="list-group">
+              <li class="list-group-item" *ngFor="let caracteristique of caracteristiquesNames; let i = index">
+                {{ caracteristique }} : {{ caracteristiques[i] }}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button (click)="onNext()" class="btn-next">Accueil</button>
+  <router-outlet></router-outlet>

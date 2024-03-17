@@ -1,0 +1,12 @@
+<h1>Formulaire</h1>
+
+<form [formGroup]="formulaire"  #formDirective="ngForm">
+    <div>
+        <label for="Username">Nom du Joueur:</label>
+        <input type="text" id="Username" formControlName="Username">
+        <label for="PersoName">Nom du Personnage:</label>
+        <input type="PersoName" id="PersoName" formControlName="PersoName">
+    </div>
+    <button type="submit" (click)="submitForm()">Soumettre</button>
+</form>
+<router-outlet></router-outlet>

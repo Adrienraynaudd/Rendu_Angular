@@ -1,0 +1,60 @@
+.class-select-container {
+    margin-bottom: 20px;
+}
+
+.class-select-label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.class-select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+}
+
+.archetype-container {
+    margin-top: 20px;
+}
+
+.archetype-title {
+    margin-bottom: 10px;
+}
+
+.archetype-select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+}
+
+.archetype-description {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

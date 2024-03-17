@@ -1,0 +1,17 @@
+<div *ngIf="classes.length > 0" class="class-select-container">
+    <label for="classeSelect" class="class-select-label">Choisissez une classe :</label>
+    <select id="classeSelect" (change)="onClasseSelect($event)" class="class-select">
+        <option *ngFor="let classe of classes" [value]="classe.name">{{ classe.name }}</option>
+    </select>
+  
+    <div *ngIf="selectedClass" class="archetype-container">
+        <h2 class="archetype-title">Archétypes de {{ selectedClass }} :</h2>
+        <select (change)="onArchetypeSelect($event)" class="archetype-select">
+            <option value="">Choisissez un archétype</option>
+            <option *ngFor="let archetype of getArchetypesForSelectedClass()" [value]="archetype.name">{{ archetype.name }}</option>
+        </select>
+        <p *ngIf="selectedArchetype" class="archetype-description">{{ getSelectedArchetypeDescription() }}</p>
+    </div>
+    <button (click)="onNext()" class="btn-next">Suivant</button>
+</div>
+<router-outlet></router-outlet>

@@ -1,0 +1,17 @@
+<div class="select-container">
+  <select
+    *ngIf="races && races.length > 0"
+    (change)="onRaceSelect($event)"
+    class="custom-select"
+  >
+    <option *ngFor="let race of races" [value]="race.name">
+      {{ race.name }}
+    </option>
+  </select>
+</div>
+
+<p *ngIf="selectedRace" class="description">{{ getDescription() }}</p>
+
+<button (click)="onNext()" class="btn-next">Suivant</button>
+
+<router-outlet></router-outlet>

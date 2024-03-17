@@ -1,0 +1,18 @@
+<div class="select-container">
+    <select
+      *ngIf="backgrounds && backgrounds.length > 0"
+      (change)="onBackgroundsSelect($event)"
+      class="custom-select"
+    >
+      <option *ngFor="let background of backgrounds" [value]="background.name">
+        {{ background.name }}
+      </option>
+    </select>
+  </div>
+  
+  <p *ngIf="selectedBackground" class="description">{{ getDescription() }}</p>
+  
+  <button (click)="onNext()" class="btn-next">Suivant</button>
+  
+  <router-outlet></router-outlet>
+  
